@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE7EE10A234B2F85005CFB54 /* nio_server.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7EE105234B2F85005CFB54 /* nio_server.c */; };
+		CE7EE10B234B2F85005CFB54 /* nio_config.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7EE106234B2F85005CFB54 /* nio_config.c */; };
+		CE7EE10C234B2F85005CFB54 /* memcached.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7EE107234B2F85005CFB54 /* memcached.c */; };
+		CE7EE10D234B2F85005CFB54 /* nio_command.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7EE109234B2F85005CFB54 /* nio_command.c */; };
 		CEC6B671234B21D0001730FF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CEC6B670234B21D0001730FF /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +27,31 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE7EE105234B2F85005CFB54 /* nio_server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nio_server.c; sourceTree = "<group>"; };
+		CE7EE106234B2F85005CFB54 /* nio_config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nio_config.c; sourceTree = "<group>"; };
+		CE7EE107234B2F85005CFB54 /* memcached.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memcached.c; sourceTree = "<group>"; };
+		CE7EE108234B2F85005CFB54 /* nio_server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nio_server.h; sourceTree = "<group>"; };
+		CE7EE109234B2F85005CFB54 /* nio_command.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nio_command.c; sourceTree = "<group>"; };
+		CE7EE110234B2FD9005CFB54 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		CE7EE111234B2FD9005CFB54 /* missing */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = missing; sourceTree = "<group>"; };
+		CE7EE112234B2FD9005CFB54 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING; sourceTree = "<group>"; };
+		CE7EE113234B2FD9005CFB54 /* NEWS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEWS; sourceTree = "<group>"; };
+		CE7EE114234B2FD9005CFB54 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		CE7EE115234B2FD9005CFB54 /* configure */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = configure; sourceTree = "<group>"; };
+		CE7EE116234B2FD9005CFB54 /* configure.ac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = configure.ac; sourceTree = "<group>"; };
+		CE7EE117234B2FD9005CFB54 /* config.h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.h.in; sourceTree = "<group>"; };
+		CE7EE118234B2FD9005CFB54 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		CE7EE119234B2FD9005CFB54 /* install-sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "install-sh"; sourceTree = "<group>"; };
+		CE7EE11A234B2FD9005CFB54 /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		CE7EE11B234B2FD9005CFB54 /* aclocal.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = aclocal.m4; sourceTree = "<group>"; };
+		CE7EE11C234B2FDA005CFB54 /* AUTHORS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AUTHORS; sourceTree = "<group>"; };
+		CE7EE11D234B2FDA005CFB54 /* depcomp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = depcomp; sourceTree = "<group>"; };
+		CE7EE11E234B2FDA005CFB54 /* INSTALL */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL; sourceTree = "<group>"; };
+		CE7EE11F234B2FDA005CFB54 /* compile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = compile; sourceTree = "<group>"; };
+		CE7EE120234B2FDA005CFB54 /* config.status */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = config.status; sourceTree = "<group>"; };
+		CE7EE122234B2FFF005CFB54 /* conf */ = {isa = PBXFileReference; lastKnownFileType = folder; path = conf; sourceTree = "<group>"; };
+		CE7EE123234B2FFF005CFB54 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+		CE7EE124234B2FFF005CFB54 /* logs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = logs; sourceTree = "<group>"; };
 		CEC6B66D234B21D0001730FF /* nestaio */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nestaio; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC6B670234B21D0001730FF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,9 +67,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE7EE10F234B2FB5005CFB54 /* autotools */ = {
+			isa = PBXGroup;
+			children = (
+				CE7EE11B234B2FD9005CFB54 /* aclocal.m4 */,
+				CE7EE11C234B2FDA005CFB54 /* AUTHORS */,
+				CE7EE11A234B2FD9005CFB54 /* ChangeLog */,
+				CE7EE11F234B2FDA005CFB54 /* compile */,
+				CE7EE117234B2FD9005CFB54 /* config.h.in */,
+				CE7EE120234B2FDA005CFB54 /* config.status */,
+				CE7EE115234B2FD9005CFB54 /* configure */,
+				CE7EE116234B2FD9005CFB54 /* configure.ac */,
+				CE7EE112234B2FD9005CFB54 /* COPYING */,
+				CE7EE11D234B2FDA005CFB54 /* depcomp */,
+				CE7EE11E234B2FDA005CFB54 /* INSTALL */,
+				CE7EE119234B2FD9005CFB54 /* install-sh */,
+				CE7EE110234B2FD9005CFB54 /* Makefile.am */,
+				CE7EE114234B2FD9005CFB54 /* Makefile.in */,
+				CE7EE111234B2FD9005CFB54 /* missing */,
+				CE7EE113234B2FD9005CFB54 /* NEWS */,
+				CE7EE118234B2FD9005CFB54 /* README */,
+			);
+			name = autotools;
+			sourceTree = "<group>";
+		};
 		CEC6B664234B21D0001730FF = {
 			isa = PBXGroup;
 			children = (
+				CE7EE122234B2FFF005CFB54 /* conf */,
+				CE7EE123234B2FFF005CFB54 /* data */,
+				CE7EE124234B2FFF005CFB54 /* logs */,
+				CE7EE10F234B2FB5005CFB54 /* autotools */,
 				CEC6B66F234B21D0001730FF /* src */,
 				CEC6B66E234B21D0001730FF /* Products */,
 			);
@@ -57,6 +114,11 @@
 		CEC6B66F234B21D0001730FF /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CE7EE107234B2F85005CFB54 /* memcached.c */,
+				CE7EE109234B2F85005CFB54 /* nio_command.c */,
+				CE7EE106234B2F85005CFB54 /* nio_config.c */,
+				CE7EE105234B2F85005CFB54 /* nio_server.c */,
+				CE7EE108234B2F85005CFB54 /* nio_server.h */,
 				CEC6B670234B21D0001730FF /* main.c */,
 			);
 			path = src;
@@ -119,6 +181,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC6B671234B21D0001730FF /* main.c in Sources */,
+				CE7EE10B234B2F85005CFB54 /* nio_config.c in Sources */,
+				CE7EE10A234B2F85005CFB54 /* nio_server.c in Sources */,
+				CE7EE10C234B2F85005CFB54 /* memcached.c in Sources */,
+				CE7EE10D234B2F85005CFB54 /* nio_command.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

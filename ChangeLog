@@ -1,0 +1,20 @@
+2011/02/11(0.3.1)
+    - promoted efficiency of it by buffering for socket input.
+
+2011/01/08(0.3.0)
+    - assigned one connection to one thread,
+      but changed it to be able to handle it in few threads.
+      changed the default value of the 'worker_threads' parameter to 4 from 100.
+
+2010/12/11 (0.2.1)
+    - bug fix: memcached.c
+	I did not receive data for the number of bytes by 'set' command.
+    - bget command, When I was not found, I return 'n', other case is 'e'.
+    - add 'flash_all' memcached command.
+
+2010/10/30 (0.2.0)
+    - add replication command.
+        bget, bset
+
+2010/09/25 (0.1.0)
+    - first release
