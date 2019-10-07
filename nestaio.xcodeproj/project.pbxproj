@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CEC6B66D234B21D0001730FF /* nestsio */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nestsio; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC6B66D234B21D0001730FF /* nestaio */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nestaio; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC6B670234B21D0001730FF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		CEC6B664234B21D0001730FF = {
 			isa = PBXGroup;
 			children = (
-				CEC6B66F234B21D0001730FF /* nestsio */,
+				CEC6B66F234B21D0001730FF /* src */,
 				CEC6B66E234B21D0001730FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,25 @@
 		CEC6B66E234B21D0001730FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEC6B66D234B21D0001730FF /* nestsio */,
+				CEC6B66D234B21D0001730FF /* nestaio */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CEC6B66F234B21D0001730FF /* nestsio */ = {
+		CEC6B66F234B21D0001730FF /* src */ = {
 			isa = PBXGroup;
 			children = (
 				CEC6B670234B21D0001730FF /* main.c */,
 			);
-			path = nestsio;
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CEC6B66C234B21D0001730FF /* nestsio */ = {
+		CEC6B66C234B21D0001730FF /* nestaio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEC6B674234B21D0001730FF /* Build configuration list for PBXNativeTarget "nestsio" */;
+			buildConfigurationList = CEC6B674234B21D0001730FF /* Build configuration list for PBXNativeTarget "nestaio" */;
 			buildPhases = (
 				CEC6B669234B21D0001730FF /* Sources */,
 				CEC6B66A234B21D0001730FF /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = nestsio;
+			name = nestaio;
 			productName = nestsio;
-			productReference = CEC6B66D234B21D0001730FF /* nestsio */;
+			productReference = CEC6B66D234B21D0001730FF /* nestaio */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CEC6B668234B21D0001730FF /* Build configuration list for PBXProject "nestsio" */;
+			buildConfigurationList = CEC6B668234B21D0001730FF /* Build configuration list for PBXProject "nestaio" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEC6B66C234B21D0001730FF /* nestsio */,
+				CEC6B66C234B21D0001730FF /* nestaio */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +238,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +247,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -253,7 +255,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEC6B668234B21D0001730FF /* Build configuration list for PBXProject "nestsio" */ = {
+		CEC6B668234B21D0001730FF /* Build configuration list for PBXProject "nestaio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEC6B672234B21D0001730FF /* Debug */,
@@ -262,7 +264,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEC6B674234B21D0001730FF /* Build configuration list for PBXNativeTarget "nestsio" */ = {
+		CEC6B674234B21D0001730FF /* Build configuration list for PBXNativeTarget "nestaio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEC6B675234B21D0001730FF /* Debug */,

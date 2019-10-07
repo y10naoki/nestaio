@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:nestsio.xcodeproj">
+      location = "self:/Users/val00048/xcodeproj/nestsio/nestaio.xcodeproj">
    </FileRef>
 </Workspace>
