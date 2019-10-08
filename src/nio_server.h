@@ -124,17 +124,17 @@ extern "C" {
 int config(const char* conf_fname);
 
 /* nio_server.c */
-void nio_server();
+void nio_server(void);
 
 /* nio_command.c */
-void stop_server();
-void status_server();
+void stop_server(void);
+void status_server(void);
 
 /* memcached.c */
 int memcached_request(SOCKET socket, struct sockaddr_in sockaddr);
-int memcached_worker_open();
-int memcached_open();
-void memcached_close();
+int memcached_worker_open(void);
+int memcached_open(void);
+void memcached_close(void);
 
 #ifdef __cplusplus
 }
