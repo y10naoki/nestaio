@@ -12,6 +12,7 @@
 		CE7EE10C234B2F85005CFB54 /* memcached.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7EE107234B2F85005CFB54 /* memcached.c */; };
 		CE7EE10D234B2F85005CFB54 /* nio_command.c in Sources */ = {isa = PBXBuildFile; fileRef = CE7EE109234B2F85005CFB54 /* nio_command.c */; };
 		CEC6B671234B21D0001730FF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CEC6B670234B21D0001730FF /* main.c */; };
+		CEF4F146234C581D00DCBAF4 /* libnesta-0.9.5.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF4F145234C581D00DCBAF4 /* libnesta-0.9.5.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +55,7 @@
 		CE7EE124234B2FFF005CFB54 /* logs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = logs; sourceTree = "<group>"; };
 		CEC6B66D234B21D0001730FF /* nestaio */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nestaio; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC6B670234B21D0001730FF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		CEF4F145234C581D00DCBAF4 /* libnesta-0.9.5.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libnesta-0.9.5.0.dylib"; path = "../../../../usr/local/lib/libnesta-0.9.5.0.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF4F146234C581D00DCBAF4 /* libnesta-0.9.5.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +103,7 @@
 				CE7EE10F234B2FB5005CFB54 /* autotools */,
 				CEC6B66F234B21D0001730FF /* src */,
 				CEC6B66E234B21D0001730FF /* Products */,
+				CEF4F144234C581C00DCBAF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +126,14 @@
 				CEC6B670234B21D0001730FF /* main.c */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		CEF4F144234C581C00DCBAF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEF4F145234C581D00DCBAF4 /* libnesta-0.9.5.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
