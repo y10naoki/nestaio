@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="memcached,キーバリューストア,ハッシュデータベース">
+<title>Nesta IO</title>
+<link rel="stylesheet" type="text/css" href="./dstyle.css">
+</head>
+<body>
+
+<h1>Nesta/IO</h1>
+
+<h2>Nesta/IO とは</h2>
+
+<p>Nesta/IO は <a href="https://github.com/memcached/memcached/blob/master/doc/protocol.txt">memcached プロトコル</a>に対応したキー・バリュー・ストアです。
+memcached と違いデータはファイルとしてディスクに保存されるため、プログラムを終了しても消えることはありません。
+データの有効期間を指定する expiration time にも対応しています。
+</p>
+
+<p>Nesta/IO はキー・バリュー・ストアを実現するためのハッシュ・データベースを実装した nestalib と <a href="https://github.com/memcached/memcached/blob/master/doc/protocol.txt">memcached プロトコル</a>を処理するプログラム Nesta/IO から構成されています。プログラムは C 言語で書かれています。
+</p>
+
+<p>Nesta/IO は Linux, Mac OS/X, および Windows で動作します。
+</p>
+
+<h2>ダウンロード</h2>
+
+<p>ライセンスは MIT License になります。
+</p>
+
+nestalib:&nbsp;
+<a href="https://github.com/y10naoki/nestalib">https://github.com/y10naoki/nestalib</a><br>
+Nesta/IO:&nbsp;
+<a href="https://github.com/y10naoki/nestaio">https://github.com/y10naoki/nestaio</a><br>
+
+<h2>インストール</h2>
+
+<p>UNIX 系 OS 上では以下のようにインストールします。<br>
+nestalib をインストールした後に Nesta/IO をインストールします。
+</p>
+
+<p>
+1. nestalib のインストール<br>
+デフォルトではライブラリが <tt>/usr/local/lib</tt> にヘッダーファイルが <tt>/usr/local/include/nestalib</tt> にインストールされます。
+<pre>
+$ tar zxvf nestalib-0.9.4.tar.gz
+$ cd nestalib-0.9.4
+$ ./configure
+$ make
+$ sudo make install
+</pre>
+</p>
+
+<p>
+2. Nesta/IO のインストール<br>
+<pre>
+$ tar zxvf nestaio-0.3.1.tar.gz
+$ cd nestaio-0.3.1
+$ ./configure
+$ make
+</pre>
+</p>
+
+<h2>起動と終了の方法</h2>
+
+<p>
+【起動方法】
+<pre>
+$ ./nestaio [-start] [-f <i>conf.file</i>]
+</pre>
+</p>
+
+<p>
+【終了方法】
+<pre>
+$ ./nestaio -stop [-f <i>conf.file</i>]
+</pre>
+</p>
+
+<h2>コンフィグレーション</h2>
+
+<p>
+コンフィグレーションは Nesta/IO を展開したディレクトリの <tt>conf/nestaio.conf</tt> を修正します。<br>
+<tt>conf/nestaio.conf</tt> の修正を反映させるにはプログラムを再起動する必要があります。
+</p>
+
+<ul>
+  <li><tt>nio.daemon</tt> デーモンとして動作させる場合は 1 を指定します。デフォルトは 1 です。
+  <li><tt>nio.username</tt> ユーザーを切り替える場合のユーザー名を指定します。
+  <li><tt>nio.port_no</tt> TCP/IP のポート番号を指定します。デフォルトは 11211 です。
+  <li><tt>nio.backlog</tt> 接続キューの数を指定します。デフォルトは 100 です。
+  <li><tt>nio.worker_threads</tt> ワーカスレッド数を指定します。デフォルトは 4 です。
+  <li><tt>nio.database.path</tt> データベースのファイル名を指定します。
+  <li><tt>nio.nio_bucket_num</tt> ハッシュデータベースのバケット数を指定します。デフォルトは 1000000 です。
+  <li><tt>nio.mmap_size</tt> mmapサイズを指定します。デフォルトは 0 で自動拡張になります。
+  <li><tt>nio.error_file</tt> エラーログのファイル名を指定します。
+  <li><tt>nio.output_file</tt> 出力ログのファイル名を指定します。
+  <li><tt>nio.trace_flag</tt> 動作状態を標準出力に出力する場合は 1 を指定します。デフォルトは 0 です。</tt> 
+</ul>
+
+
+<h2>ベンチマーク</h2>
+
+<p>memcached と Nesta/IO のベンチマークを参考値として掲載しておきます。<br>
+ベンチマークプログラムには <a href="http://www.interdb.jp/techinfo/mcb/">mcb</a> を利用させていただきました。
+</p>
+
+<p>memcached のバージョンは 1.4.5 でメモリサイズを 100MB 割り当てました。</p>
+<pre>
+$ ./memcached -m 100
+</pre>
+
+<p>【評価マシン】<br>
+MacBook Pro (CPU:Intel Core 2 Duo 2.26GHz, Memory:2GB)<br>
+Mac OS X 10.6 Snow Leopard (64bits kernel)
+</p>
+<p>【ベンチマーク内容】<br>
+・set：同時接続 100 でランダムなキーを生成し、データ長が約1,000バイトの set コマンドを１接続当たり 1,000回繰り返す。<br>
+・get：同時接続 100 でランダムなキーを生成し、get コマンドを１接続当たり 1,000回繰り返す。<br>
+</p>
+
+<table width="100%" cellpadding="0" cellspacing="2" border="0">
+  <tbody>
+    <tr>
+      <td valign="top"><font color="#000000" size=-1>
+        <table border="1" cellpadding="1" cellspacing="0" width="80%">
+          <tr bgcolor="#FFFFFF" >
+            <td align="center"><b>command</b></td>
+            <td align="center"><b>memcached(#/sec)</b></td>
+            <td align="center"><b>nestaio(#/sec)</b></td>
+            <td align="center"><b>performance ratio</b></td>
+          </tr>
+          <tr bgcolor="#FFFFCC">
+            <td><tt>$ ./mcb -c set -t 100 -n 1000 -l 1000</tt></td>
+            <td align="right">32,349</td>
+            <td align="right">25,614</td>
+            <td align="right">79(%)</td>
+          </tr>
+          <tr bgcolor="#FFFFCC">
+            <td><tt>$ ./mcb -c get -t 100 -n 1000</tt></td>
+            <td align="right">35,474</td>
+            <td align="right">26,787</td>
+            <td align="right">75(%)</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>制限事項</h2>
+
+<ul>
+  <li>キーの最大サイズは 250 バイトです。
+  <li>値の最大サイズは 1MB です。
+  <li>STAT コマンドには対応していません（空値が返されます）。
+  <li>UDP プロトコル、バイナリプロトコルには対応していません。
+</ul>
+
+<hr>
+
+<p>
+Author: <a href="mailto:y10naoki@gmail.com">YAMAMOTO Naoki</a><br>
+Create date: 2011/02/05<br>
+Last modified: 2019/10/10
+</p>
+</BODY>
+</HTML>
