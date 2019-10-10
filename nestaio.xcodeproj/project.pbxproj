@@ -28,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE59C0EC234F23A700433420 /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = doc; sourceTree = "<group>"; };
 		CE7EE105234B2F85005CFB54 /* nio_server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nio_server.c; sourceTree = "<group>"; };
 		CE7EE106234B2F85005CFB54 /* nio_config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = nio_config.c; sourceTree = "<group>"; };
 		CE7EE107234B2F85005CFB54 /* memcached.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memcached.c; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		CEC6B664234B21D0001730FF = {
 			isa = PBXGroup;
 			children = (
+				CE59C0EC234F23A700433420 /* doc */,
 				CE7EE122234B2FFF005CFB54 /* conf */,
 				CE7EE123234B2FFF005CFB54 /* data */,
 				CE7EE124234B2FFF005CFB54 /* logs */,
